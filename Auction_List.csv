@@ -1,0 +1,611 @@
+Set,Name,Country,2024 Team,C/U/A,Role,Base Price
+MQ1,Virat Kohli,India,RCB,Capped,Batter,2
+MQ1,Rohit Sharma,India,MI,Capped,Batter,2
+MQ1,Jasprit Bumrah,India,MI,Capped,Bowler,2
+MQ1,Rashid Khan,Afghanistan,GT,Capped,Bowler,2
+MQ1,Hardik Pandya,India,MI,Capped,All Rounder,2
+MQ1,Sanju Samson,India,RR,Capped,Wicketkeeper,2
+MQ2,Jos Buttler,England,RR,Capped,Wicketkeeper,2
+MQ2,Shreyas Iyer,India,KKR,Capped,Batter,2
+MQ2,Rishabh Pant,India,DC,Capped,Wicketkeeper,2
+MQ2,Kagiso Rabada,South Africa,PBKS,Capped,Bowler,2
+MQ2,Arshdeep Singh,India,PBKS,Capped,Bowler,2
+MQ2,Mitchell Starc,Australia,KKR,Capped,Bowler,2
+MQ3,Andre Russell,West Indies,KKR,Capped,All Rounder,2
+MQ3,Shubman Gill,India,GT,Capped,Batter,2
+MQ3,Ravindra Jadeja,India,CSK,Capped,All Rounder,2
+MQ3,Axar Patel,India,DC,Capped,All Rounder,2
+MQ3,Suryakumar Yadav,India,MI,Capped,Batter,2
+MQ3,Nicholas Pooran,West Indies,LSG,Capped,Wicketkeeper,2
+MQ4,Yuzvendra Chahal,India,RR,Capped,Bowler,2
+MQ4,Mohammed Siraj,India,RCB,Capped,Bowler,2
+MQ4,Mohammed Shami,India,GT,Capped,Bowler,2
+MQ4,Liam Livingstone,England,PBKS,Capped,Batter,2
+MQ4,David Miller,South Africa,GT,Capped,Batter,1.5
+MQ4,KL Rahul,India,LSG,Capped,Wicketkeeper,2
+BA1,Jake Fraser-McGurk,Australia,DC,Capped,Batter,2
+BA1,Ruturaj Gaikwad,India,CSK,Capped,Batter,2
+BA1,Devon Conway,NewZealand,CSK,Capped,Batter,2
+BA1,Harry Brook,England,DC,Capped,Batter,2
+BA1,Rahul Tripathi,India,SRH,Capped,Batter,0.75
+BA1,Aiden Markram,South Africa,SRH,Capped,Batter,2
+BA1,Sai Sudharshan,India,GT,Capped,Batter,1.5
+BA1,Rinku Singh,India,KKR,Capped,Batter,2
+BA1,Tristan Stubbs,South Africa,DC,Capped,Batter,2
+BA1,Devdutt Padikkal,India,LSG,Capped,Batter,2
+AL1,Pat Cummins,Australia,SRH,Capped,All Rounder,2
+AL1,Shivam Dube,India,CSK,Capped,All Rounder,2
+AL1,Abhishek Sharma,India,SRH,Capped,All Rounder,2
+AL1,R Ashwin,India,RR,Capped,All Rounder,2
+AL1,Venkatesh Iyer,India,KKR,Capped,All Rounder,2
+AL1,Mitchell Marsh,Australia,DC,Capped,All Rounder,2
+AL1,Glenn Maxwell,Australia,RCB,Capped,All Rounder,2
+AL1,Harshal Patel,India,PBKS,Capped,All Rounder,2
+AL1,Nitish Kumar Reddy,India,SRH,Capped,All Rounder,2
+AL1,Marcus Stoinis,Australia,LSG,Capped,All Rounder,2
+AL1,Rachin Ravindra,New Zealand,CSK,Capped,All Rounder,1.5
+AL1,Sunil Narine,West Indies,KKR,Capped,All Rounder,2
+WK1,Jonny Bairstow,England,PBKS,Capped,Wicketkeeper,2
+WK1,Quinton De Kock,South Africa,LSG,Capped,Wicketkeeper,2
+WK1,Rahmanullah Gurbaz,Afghanistan,KKR,Capped,Wicketkeeper,2
+WK1,Ishan Kishan,India,MI,Capped,Wicketkeeper,2
+WK1,Phil Salt,England,KKR,Capped,Wicketkeeper,2
+WK1,Dhruv Jurel,India,RR,Capped,Wicketkeeper,1
+WK1,Jitesh Sharma,India,PBKS,Capped,Wicketkeeper,1
+WK1,Heinrich Klaasen,South Africa,SRH,Capped,Wicketkeeper,2
+FA1,Syed Khaleel Ahmed,India,DC,Capped,Bowler,2
+FA1,Trent Boult,New Zealand,RR,Capped,Bowler,2
+FA1,Josh Hazlewood,Australia,-,Capped,Bowler,2
+FA1,Avesh Khan,India,RR,Capped,Bowler,2
+FA1,Prasidh Krishna,India,RR,Capped,Bowler,2
+FA1,T. Natarajan,India,SRH,Capped,Bowler,2
+FA1,Anrich Nortje,South Africa,DC,Capped,Bowler,2
+FA1,Jofra Archer,England,RR and MI,Capped,Bowler,2
+FA1,Matheesha Pathirana,Sri Lanka,CSK,Capped,Bowler,2
+FA1,Harshit Rana,India,KKR,Capped,Bowler,2
+FA1,Mayank Yadav,India,LSG,Capped,Bowler,2
+SP1,Kuldeep Yadav,India,DC,Capped,Bowler,2
+SP1,Varun Chakaravarthy,India,KKR,Capped,Bowler,2
+SP1,Ravi Bishnoi,India,LSG,Capped,Bowler,2
+SP1,Noor Ahmad,Afghanistan,GT,Capped,Bowler,2
+SP1,Rahul Chahar,India,PBKS,Capped,Bowler,1
+SP1,Adam Zampa,Australia,RR,Capped,Bowler,2
+SP1,Maheesh Theekshana,Sri Lanka,CSK,Capped,Bowler,2
+SP1,Waqar Salamkheil,Afghanistan,-,Capped,Bowler,0.75
+UBA1,Yash Dhull,India,DC,Uncapped,Batter,0.3
+UBA1,Abhinav Manohar,India,GT,Uncapped,Batter,0.3
+UBA1,Karun Nair,India,-,Uncapped,Batter,0.3
+UBA1,Angkrish Raghuvanshi,India,KKR,Uncapped,Batter,0.3
+UBA1,Anmolpreet Singh,India,SRH,Uncapped,Batter,0.3
+UBA1,Atharva Taide,India,PBKS,Uncapped,Batter,0.3
+UBA1,Nehal Wadhera,India,MI,Uncapped,Batter,0.3
+UAL1,Harpreet Brar,India,PBKS,Uncapped,All Rounder,0.3
+UAL1,Naman Dhir,India,MI,Uncapped,All Rounder,0.3
+UAL1,Mahipal Lomror,India,RCB,Uncapped,All Rounder,0.5
+UAL1,Sameer Rizvi,India,CSK,Uncapped,All Rounder,0.3
+UAL1,Abdul Samad,India,SRH,Uncapped,All Rounder,0.3
+UAL1,Vijay Shankar,India,GT,Uncapped,All Rounder,0.3
+UAL1,Ashutosh Sharma,India,PBKS,Uncapped,All Rounder,0.3
+UAL1,Nishant Sindhu,India,CSK,Uncapped,All Rounder,0.3
+UAL1,Utkarsh Singh,India,-,Uncapped,All Rounder,0.3
+UWK1,Aryan Juyal,India,-,Uncapped,Wicketkeeper,0.3
+UWK1,Kumar Kushagra,India,GT,Uncapped,Wicketkeeper,0.3
+UWK1,Robin Minz,India,GT,Uncapped,Wicketkeeper,0.3
+UWK1,Anuj Rawat,India,RCB,Uncapped,Wicketkeeper,0.3
+UWK1,Luvnith Sisodia,India,-,Uncapped,Wicketkeeper,0.3
+UWK1,Vishnu Vinod,India,MI,Uncapped,Wicketkeeper,0.3
+UWK1,Upendra Singh Yadav,India,SRH,Uncapped,Wicketkeeper,0.3
+UFA1,Vaibhav Arora,India,KKR,Uncapped,Bowler,0.3
+UFA1,Rasikh Dar,India,DC,Uncapped,Bowler,0.3
+UFA1,Akash Madhwal,India,MI,Uncapped,Bowler,0.3
+UFA1,Mohit Sharma,India,GT,Uncapped,Bowler,0.5
+UFA1,Simarjeet Singh,India,CSK,Uncapped,Bowler,0.3
+UFA1,Yash Thakur,India,LSG,Uncapped,Bowler,0.3
+UFA1,Kartik Tyagi,India,GT,Uncapped,Bowler,0.4
+UFA1,Vyshak Vijaykumar,India,RCB,Uncapped,Bowler,0.3
+USP1,Piyush Chawla,India,MI,Uncapped,Bowler,0.5
+USP1,Shreyas Gopal,India,MI,Uncapped,Bowler,0.3
+USP1,Mayank Markande,India,SRH,Uncapped,Bowler,0.3
+USP1,Suyash Sharma,India,KKR,Uncapped,Bowler,0.3
+USP1,Karn Sharma,India,RCB,Uncapped,Bowler,0.5
+USP1,Kumar Kartikeya,India,MI,Uncapped,Bowler,0.3
+USP1,Manav Suthar,India,GT,Uncapped,Bowler,0.3
+BA2,Faf Du Plessis,South Africa,RCB,Capped,Batter,1
+BA2,Glenn Phillips,New Zealand,SRH,Capped,Batter,2
+BA2,Rovman Powell,West Indies,RR,Capped,Batter,1.5
+BA2,Ajinkya Rahane,India,CSK,Capped,Batter,1.5
+BA2,Prithvi Shaw,India,DC,Capped,Batter,0.75
+BA2,Kane Williamson,New Zealand,GT,Capped,Batter,2
+BA2,David Warner,Australia,DC,Capped,Batter,2
+BA2,Yashasvi Jaiswal,India,RR,Capped,Batter,2
+BA2,Riyan Parag,India,RR,Capped,Batter,2
+BA2,Shimron Hetmyer,West Indies,RR,Capped,Batter,2
+BA2,Travis Head,Australia,SRH,Capped,Batter,2
+BA2,Tilak Varma,India,MI,Capped,Batter,2
+BA2,Rajat Patidar,India,RCB,Capped,Batter,2
+AL2,Sam Curran,England,PBKS,Capped,All Rounder,2
+AL2,Marco Jansen,South Africa,SRH,Capped,All Rounder,1.25
+AL2,Daryl Mitchell,New Zealand,CSK,Capped,All Rounder,2
+AL2,Krunal Pandya,India,LSG,Capped,All Rounder,2
+AL2,Nitish Rana,India,KKR,Capped,All Rounder,1.5
+AL2,Washington Sundar,India,SRH,Capped,All Rounder,2
+AL2,Shardul Thakur,India,CSK,Capped,All Rounder,2
+WK2,K.S Bharat,India,KKR,Capped,Wicketkeeper,0.75
+WK2,Alex Carey,Australia,-,Capped,Wicketkeeper,1
+WK2,Donovan Ferreira,South Africa,RR,Capped,Wicketkeeper,0.75
+WK2,Shai Hope,West Indies,DC,Capped,Wicketkeeper,1.25
+WK2,Josh Inglis,Australia,-,Capped,Wicketkeeper,2
+WK2,Ryan Rickelton,South Africa,-,Capped,Wicketkeeper,1
+FA2,Deepak Chahar,India,CSK,Capped,Bowler,2
+FA2,Gerald Coetzee,South Africa,Mi,Capped,Bowler,1.25
+FA2,Akash Deep,India,RCB,Capped,Bowler,1
+FA2,Tushar Deshpande,India,CSK,Capped,Bowler,1
+FA2,Lockie Ferguson,New Zealand,RCB,Capped,Bowler,2
+FA2,Bhuvneshwar Kumar,India,SRH,Capped,Bowler,2
+FA2,Mukesh Kumar,India,DC,Capped,Bowler,2
+SP2,Allah Ghazanfar,Afghanistan,KKR,Capped,Bowler,0.75
+SP2,Akeal Hosein,West Indies,-,Capped,Bowler,1.5
+SP2,Keshav Maharaj,South Africa,RR,Capped,Bowler,0.75
+SP2,Mujeeb Ur Rahman,Afghanistan,-,Capped,Bowler,2
+SP2,Adil Rashid,England,-,Capped,Bowler,2
+SP2,Vijayakanth Viyaskanth,Sri Lanka,SRH,Capped,Bowler,0.75
+UBA2,Ricky Bhui,India,DC,Uncapped,Batter,0.3
+UBA2,Swastik Chhikara,India,DC,Uncapped,Batter,0.3
+UBA2,Aarya Desai,India,-,Uncapped,Batter,0.3
+UBA2,Shubham Dubey,India,RR,Uncapped,Batter,0.3
+UBA2,Madhav Kaushik,India,-,Uncapped,Batter,0.3
+UBA2,Pukhraj Mann,India,-,Uncapped,Batter,0.3
+UBA2,Shaik Rasheed,India,CSK,Uncapped,Batter,0.3
+UBA2,Himmat Singh,India,-,Uncapped,Batter,0.3
+UAL2,Mayank Dagar,India,RCB,Uncapped,All Rounder,0.3
+UAL2,Anshul Kamboj,India,MI,Uncapped,All Rounder,0.3
+UAL2,Mohd. Arshad Khan,India,LSG,Uncapped,All Rounder,0.3
+UAL2,Darshan Nalkande,India,GT,Uncapped,All Rounder,0.3
+UAL2,Suyash Prabhudessai,India,RCB,Uncapped,All Rounder,0.3
+UAL2,Anukul Roy,India,KKR,Uncapped,All Rounder,0.3
+UAL2,Swapnil Singh,India,PBKS,Uncapped,All Rounder,0.3
+UAL2,Sanvir Singh,India,SRH,Uncapped,All Rounder,0.3
+UWK2,Avanish Aravelly,India,CSK,Uncapped,Wicketkeeper,0.3
+UWK2,Vansh Bedi,India,-,Uncapped,Wicketkeeper,0.3
+UWK2,Saurav Chauhan,India,RCB,Uncapped,Wicketkeeper,0.3
+UWK2,Harvik Desai,India,MI,Uncapped,Wicketkeeper,0.3
+UWK2,Tom Kohler-Cadmore,England,RR,Uncapped,Wicketkeeper,0.5
+UWK2,Kunal Rathore,India,RR,Uncapped,Wicketkeeper,0.3
+UWK2,B.R Sharath,India,GT,Uncapped,Wicketkeeper,0.3
+UFA2,Gurnoor Singh Brar,India,GT,Uncapped,Bowler,0.3
+UFA2,Mukesh Choudhary,India,CSK,Uncapped,Bowler,0.3
+UFA2,Sakib Hussain,India,KKR,Uncapped,Bowler,0.3
+UFA2,Vidwath Kaverappa,India,PBKS,Uncapped,Bowler,0.3
+UFA2,Rajan Kumar,India,RCB,Uncapped,Bowler,0.3
+UFA2,Sushant Mishra,India,GT,Uncapped,Bowler,0.3
+UFA2,Arjun Tendulkar,India,MI,Uncapped,Bowler,0.3
+USP2,Zeeshan Ansari,India,-,Uncapped,Bowler,0.3
+USP2,Prince Choudhary,India,PBKS,Uncapped,Bowler,0.3
+USP2,Himanshu Sharma,India,RCB,Uncapped,Bowler,0.3
+USP2,M. Siddharth,India,LSG,Uncapped,Bowler,0.3
+USP2,Digvesh Singh,India,-,Uncapped,Bowler,0.3
+USP2,Prashant Solanki,India,CSK,Uncapped,Bowler,0.3
+USP2,Jhathavedh Subramanyan,India,SRH,Uncapped,Bowler,0.3
+BA3,Finn Allen,New Zealand,-,Capped,Batter,2
+BA3,Dewald Brevis,South Africa,MI,Capped,Batter,0.75
+BA3,Ben Duckett,England,-,Capped,Batter,2
+BA3,Manish Pandey,India,KKR,Capped,Batter,0.75
+BA3,Rilee Rossouw,South Africa,PBKS,Capped,Batter,2
+BA3,Sherfane Rutherford,West Indies,KKR,Capped,Batter,1.5
+BA3,Ashton Turner,Australia,LSG,Capped,Batter,1
+BA3,James Vince,England,-,Capped,Batter,2
+AL3,Shahbaz Ahamad,India,SRH,Capped,All Rounder,1
+AL3,Moeen Ali,England,CSK,Capped,All Rounder,2
+AL3,Tim David,Australia,MI,Capped,All Rounder,2
+AL3,Deepak Hooda,India,LSG,Capped,All Rounder,0.75
+AL3,Will Jacks,England,RCB,Capped,All Rounder,2
+AL3,Azmatullah Omarzai,Afghanistan,GT,Capped,All Rounder,1.5
+AL3,R. Sai Kishore,India,GT,Capped,All Rounder,0.75
+AL3,Romario Shepherd,West Indies,MI,Capped,All Rounder,1.5
+WK3,Tom Banton,England,-,Capped,Wicketkeeper,2
+WK3,Sam Billings,England,-,Capped,Wicketkeeper,1.5
+WK3,Jordan Cox,England,-,Capped,Wicketkeeper,1.25
+WK3,Ben McDermott,Australia,-,Capped,Wicketkeeper,0.75
+WK3,Kusal Mendis,Sri Lanka,-,Capped,Wicketkeeper,0.75
+WK3,Kusal Perera,Sri Lanka,-,Capped,Wicketkeeper,0.75
+WK3,Josh Philippe,Australia,-,Capped,Wicketkeeper,0.75
+WK3,Tim Seifert,New Zealand,-,Capped,Wicketkeeper,1.25
+FA3,Nandre Burger,South Africa,RR,Capped,Bowler,1.25
+FA3,Spencer Johnson,Australia,GT,Capped,Bowler,2
+FA3,Umran Malik,India,SRH,Capped,Bowler,0.75
+FA3,Mustafizur Rahman,Bangladesh,CSK,Capped,Bowler,2
+FA3,Ishant Sharma,India,DC,Capped,Bowler,0.75
+FA3,Nuwan Thushara,Sri Lanka,MI,Capped,Bowler,0.75
+FA3,Naveen Ul Haq,Afghanistan,LSG,Capped,Bowler,2
+FA3,Jaydev Unadkat,India,SRH,Capped,Bowler,1
+FA3,Umesh Yadav,India,GT,Capped,Bowler,2
+SP3,Rishad Hossain,Bangladesh,-,Capped,Bowler,0.75
+SP3,Zahir Khan Pakten,Afghanistan,-,Capped,Bowler,0.75
+SP3,Nqabayomzi Peter,South Africa,-,Capped,Bowler,0.75
+SP3,Tanveer Sangha,Australia,-,Capped,Bowler,0.75
+SP3,Tabraiz Shamsi,South Africa,-,Capped,Bowler,2
+SP3,Jeffery Vandersay,Sri Lanka,-,Capped,Bowler,0.75
+UBA3,Sachin Baby,India,-,Uncapped,Batter,0.3
+UBA3,Priyam Garg,India,-,Uncapped,Batter,0.3
+UBA3,Harnoor Pannu,India,-,Uncapped,Batter,0.3
+UBA3,Smaran Ravichandran,India,-,Uncapped,Batter,0.3
+UBA3,Shashwat Rawat,India,-,Uncapped,Batter,0.3
+UBA3,Andre Siddarth,India,-,Uncapped,Batter,0.3
+UBA3,Avneesh Sudha,India,-,Uncapped,Batter,0.3
+UBA3,Apoorv Wankhade,India,-,Uncapped,Batter,0.3
+UAL3,Yudhvir Charak,India,LSG,Uncapped,All Rounder,0.3
+UAL3,Rishi Dhawan,India,PBKS,Uncapped,All Rounder,0.3
+UAL3,Rajvardhan Hangargekar,India,CSK,Uncapped,All Rounder,0.3
+UAL3,Tanush Kotian,India,RR,Uncapped,All Rounder,0.3
+UAL3,Arshin Kulkarni,India,LSG,Uncapped,All Rounder,0.3
+UAL3,Shams Mulani,India,MI,Uncapped,All Rounder,0.3
+UAL3,Shivam Singh,India,PBKS,Uncapped,All Rounder,0.3
+UAL3,Lalit Yadav,India,DC,Uncapped,All Rounder,0.3
+UWK3,Mohammed Azharuddeen,India,-,Uncapped,Wicketkeeper,0.3
+UWK3,L.R Chethan,India,-,Uncapped,Wicketkeeper,0.3
+UWK3,Aryaman Singh Dhaliwal,India,-,Uncapped,Wicketkeeper,0.3
+UWK3,Urvil Patel,India,-,Uncapped,Wicketkeeper,0.3
+UWK3,Sanskar Rawat,India,-,Uncapped,Wicketkeeper,0.3
+UWK3,Bipin Saurabh,India,-,Uncapped,Wicketkeeper,0.3
+UWK3,Tanay Thyagarajann,India,-,Uncapped,Wicketkeeper,0.3
+UFA3,Money Grewal,India,-,Uncapped,Bowler,0.3
+UFA3,Ashwani Kumar,India,-,Uncapped,Bowler,0.3
+UFA3,Ishan Porel,India,-,Uncapped,Bowler,0.3
+UFA3,Abhilash Shetty,India,-,Uncapped,Bowler,0.3
+UFA3,Akash Singh,India,-,Uncapped,Bowler,0.3
+UFA3,Gurjapneet Singh,India,-,Uncapped,Bowler,0.3
+UFA3,Basil Thampi,India,-,Uncapped,Bowler,0.3
+USP3,Murugan Ashwin,India,-,Uncapped,Bowler,0.3
+USP3,Shreyas Chavan,India,-,Uncapped,Bowler,0.3
+USP3,Chintal Gandhi,India,-,Uncapped,Bowler,0.3
+USP3,Raghav Goyal,India,-,Uncapped,Bowler,0.3
+USP3,Jagadeesha Suchith,India,-,Uncapped,Bowler,0.3
+USP3,Roshan Waghsare,India,-,Uncapped,Bowler,0.3
+USP3,Bailapudi Yeswanth,India,-,Uncapped,Bowler,0.3
+BA4,Sediqullah Atal,Afghanistan,-,Capped,Batter,0.75
+BA4,Matthew Breetzke,South Africa,-,Capped,Batter,0.75
+BA4,Mark Chapman,New Zealand,-,Capped,Batter,1.5
+BA4,Brandon King,West Indies,-,Capped,Batter,0.75
+BA4,Evin Lewis,West Indies,-,Capped,Batter,2
+BA4,Pathum Nissanka,Sri Lanka,-,Capped,Batter,0.75
+BA4,Bhanuka Rajapaksa,Sri Lanka,-,Capped,Batter,0.75
+BA4,Steve Smith,Australia,-,Capped,Batter,2
+AL4,Gus Atkinson,England,KKR,Capped,All Rounder,2
+AL4,Tom Curran,England,RCB,Capped,All Rounder,2
+AL4,Krishnappa Gowtham,India,LSG,Capped,All Rounder,1
+AL4,Mohammad Nabi,Afghanistan,MI,Capped,All Rounder,1.5
+AL4,Gulbadin Naib,Afghanistan,DC,Capped,All Rounder,1
+AL4,Sikandar Raza,Zimbabwe,PBKS,Capped,All Rounder,1.25
+AL4,Mitchell Santner,New Zealand,CSK,Capped,All Rounder,2
+AL4,Jayant Yadav,India,GT,Capped,All Rounder,0.75
+WK4,Johnson Charles,West Indies,-,Capped,Wicketkeeper,0.75
+WK4,Litton Das,Bangladesh,-,Capped,Wicketkeeper,0.75
+WK4,Andre Fletcher,West Indies,-,Capped,Wicketkeeper,0.75
+WK4,Tom Latham,New Zealand,-,Capped,Wicketkeeper,1.5
+WK4,Ollie Pope,England,-,Capped,Wicketkeeper,0.75
+WK4,Kyle Verreynne,South Africa,-,Capped,Wicketkeeper,0.75
+FA4,Fazalhaq Farooqi,Afghanistan,SRH,Capped,Bowler,2
+FA4,Richard Gleeson,England,CSK,Capped,Bowler,0.75
+FA4,Matt Henry,New Zealand,LSG,Capped,Bowler,2
+FA4,Alzarri Joseph,West Indies,RCB,Capped,Bowler,2
+FA4,Kwena Maphaka,South Africa,MI,Capped,Bowler,0.75
+FA4,Kuldeep Sen,India,RR,Capped,Bowler,0.75
+FA4,Reece Topley,England,RCB,Capped,Bowler,0.75
+FA4,Lizaad Williams,South Africa,DC,Capped,Bowler,0.75
+FA4,Luke Wood,England,MI,Capped,Bowler,0.75
+UBA4,Sachin Dhas,India,-,Uncapped,Batter,0.3
+UBA4,Leus Du Plooy,England,-,Uncapped,Batter,0.5
+UBA4,Ashwin Hebbar,India,-,Uncapped,Batter,0.3
+UBA4,Rohan Kunnummal,India,-,Uncapped,Batter,0.3
+UBA4,Ayush Pandey,India,-,Uncapped,Batter,0.3
+UBA4,Akshat Raghuwanshi,India,-,Uncapped,Batter,0.3
+UBA4,Shoun Roger,India,-,Uncapped,Batter,0.4
+UBA4,Virat Singh,India,-,Uncapped,Batter,0.3
+UAL4,Priyansh Arya,India,-,Uncapped,All Rounder,0.3
+UAL4,Manoj Bhandage,India,RCB,Uncapped,All Rounder,0.3
+UAL4,Pravin Dubey,India,DC,Uncapped,All Rounder,0.3
+UAL4,Ajay Mandal,India,CSK,Uncapped,All Rounder,0.3
+UAL4,Prerak Mankad,India,LSG,Uncapped,All Rounder,0.3
+UAL4,Vipraj Nigam,India,-,Uncapped,All Rounder,0.3
+UAL4,Vicky Ostwal,India,DC,Uncapped,All Rounder,0.3
+UAL4,Shivalik Sharma,India,MI,Uncapped,All Rounder,0.3
+UWK4,Salil Arora,India,-,Uncapped,Wicketkeeper,0.3
+UWK4,Dinesh Bana,India,-,Uncapped,Wicketkeeper,0.3
+UWK4,Ajitesh Guruswamy,India,-,Uncapped,Wicketkeeper,0.3
+UWK4,Narayan Jagadeesan,India,-,Uncapped,Wicketkeeper,0.3
+UWK4,Shrijith Krishnan,India,-,Uncapped,Wicketkeeper,0.3
+UWK4,Michael Pepper,England,-,Uncapped,Wicketkeeper,0.5
+UWK4,Vishnu Solanki,India,-,Uncapped,Wicketkeeper,0.3
+UFA4,K.M Asif,India,-,Uncapped,Bowler,0.3
+UFA4,Akhil Chaudhary,India,-,Uncapped,Bowler,0.3
+UFA4,Himanshu Chauhan,India,-,Uncapped,Bowler,0.3
+UFA4,Arpit Guleria,India,-,Uncapped,Bowler,0.3
+UFA4,Nishanth Saranu,India,-,Uncapped,Bowler,0.3
+UFA4,Kuldip Yadav,India,-,Uncapped,Bowler,0.3
+UFA4,Prithviraj Yarra,India,-,Uncapped,Bowler,0.3
+USP4,Shubham Agrawal,India,-,Uncapped,Bowler,0.3
+USP4,Jass Inder Baidwan,India,-,Uncapped,Bowler,0.3
+USP4,Jasmer Dhankhar,India,-,Uncapped,Bowler,0.3
+USP4,Pulkit Narang,India,-,Uncapped,Bowler,0.3
+USP4,Saumy Pandey,India,-,Uncapped,Bowler,0.3
+USP4,Mohit Rathee,India,-,Uncapped,Bowler,0.3
+USP4,Himanshu Singh,India,-,Uncapped,Bowler,0.3
+BA5,Towhid Hridoy,Bangladesh,-,Capped,Batter,0.75
+BA5,Mikyle Louis,West Indies,-,Capped,Batter,0.75
+BA5,Harry Tector,Ireland,-,Capped,Batter,0.75
+BA5,Rassie Van Der Dussen,South Africa,-,Capped,Batter,2
+BA5,Will Young,New Zealand,-,Capped,Batter,1.25
+BA5,Najibullah Zadran,Afghanistan,-,Capped,Batter,0.75
+BA5,Ibrahim Zadran,Afghanistan,-,Capped,Batter,0.75
+AL5,Sean Abbott,Australia,-,Capped,All Rounder,2
+AL5,Jacob Bethell,England,-,Capped,All Rounder,1.25
+AL5,Brydon Carse,England,-,Capped,All Rounder,1
+AL5,Aaron Hardie,Australia,-,Capped,All Rounder,1.25
+AL5,Sarfaraz Khan,India,-,Capped,All Rounder,0.75
+AL5,Kyle Mayers,West Indies,LSG,Capped,All Rounder,1.5
+AL5,Kamindu Mendis,Sri Lanka,-,Capped,All Rounder,0.75
+AL5,Matthew Short,Australia,-,Capped,All Rounder,0.75
+FA5,Jason Behrendorff,Australia,MI,Capped,Bowler,1.5
+FA5,Dushmantha Chameera,Sri Lanka,LSG,Capped,Bowler,0.75
+FA5,Nathan Ellis,Australia,PBKS,Capped,Bowler,1.25
+FA5,Shamar Joseph,West Indies,LSG,Capped,Bowler,0.75
+FA5,Josh Little,Ireland,GT,Capped,Bowler,0.75
+FA5,Shivam Mavi,India,GT,Capped,Bowler,0.75
+FA5,Jhye Richardson,Australia,DC,Capped,Bowler,1.5
+FA5,Navdeep Saini,India,RR,Capped,Bowler,0.75
+UBA5,Tanmay Agarwal,India,-,Uncapped,Batter,0.3
+UBA5,Amandeep Khare,India,-,Uncapped,Batter,0.3
+UBA5,Ayush Mhatre,India,-,Uncapped,Batter,0.3
+UBA5,Salman Nizar,India,-,Uncapped,Batter,0.3
+UBA5,Aniket Verma,India,-,Uncapped,Batter,0.3
+UBA5,Sumeet Verma,India,-,Uncapped,Batter,0.3
+UBA5,Manan Vohra,India,-,Uncapped,Batter,0.3
+UBA5,Samarth Vyas,India,-,Uncapped,Batter,0.3
+UAL5,Raj Angad Bawa,India,-,Uncapped,All Rounder,0.3
+UAL5,Emanjot Chahal,India,-,Uncapped,All Rounder,0.3
+UAL5,Musheer Khan,India,-,Uncapped,All Rounder,0.3
+UAL5,Manvanth Kumar L,India,-,Uncapped,All Rounder,0.3
+UAL5,Mayank Rawat,India,-,Uncapped,All Rounder,0.3
+UAL5,Suryansh Shedge,India,-,Uncapped,All Rounder,0.3
+UAL5,Hritik Shokeen,India,-,Uncapped,All Rounder,0.3
+UAL5,Sonu Yadav,India,-,Uncapped,All Rounder,0.3
+UWK5,S. Rithik Easwaran,India,-,Uncapped,Wicketkeeper,0.3
+UWK5,Anmol Malhotra,India,-,Uncapped,Wicketkeeper,0.3
+UWK5,Pradosh Paul,India,-,Uncapped,Wicketkeeper,0.3
+UWK5,Karteek Sharma,India,-,Uncapped,Wicketkeeper,0.3
+UWK5,Akash Singh,India,-,Uncapped,Wicketkeeper,0.3
+UWK5,Tejasvi Singh,India,-,Uncapped,Wicketkeeper,0.3
+UWK5,Siddharth Yadav,India,-,Uncapped,Wicketkeeper,0.3
+UFA5,Saurabh Dubey,India,-,Uncapped,Bowler,0.3
+UFA5,Aaqib Khan,India,-,Uncapped,Bowler,0.3
+UFA5,Kulwant Khejroliya,India,-,Uncapped,Bowler,0.3
+UFA5,Ankit Singh Rajpoot,India,-,Uncapped,Bowler,0.3
+UFA5,Divesh Sharma,India,-,Uncapped,Bowler,0.3
+UFA5,Naman Tiwari,India,-,Uncapped,Bowler,0.3
+UFA5,Prince Yadav,India,-,Uncapped,Bowler,0.3
+USP5,Kunal Singh Chibb,India,-,Uncapped,Bowler,0.3
+USP5,Yuvraj Chudasama,India,-,Uncapped,Bowler,0.3
+USP5,Deepak Devadiga,India,-,Uncapped,Bowler,0.3
+USP5,Ramesh Prasad,India,-,Uncapped,Bowler,0.3
+USP5,Shivam Shukla,India,-,Uncapped,Bowler,0.3
+USP5,Himanshu Singh,India,-,Uncapped,Bowler,0.3
+USP5,Tejpreet Singh,India,-,Uncapped,Bowler,0.3
+AL6,Qais Ahmad,Afghanistan,-,Capped,All Rounder,0.75
+AL6,Charith Asalanka,Sri Lanka,-,Capped,All Rounder,0.75
+AL6,Michael Bracewell,New Zealand,-,Capped,All Rounder,1.5
+AL6,Gudakesh Motie,West Indies,-,Capped,All Rounder,0.75
+AL6,Daniel Mousley,England,-,Capped,All Rounder,0.75
+AL6,Jamie Overton,England,-,Capped,All Rounder,1.5
+AL6,Dunith Wellalage,Sri Lanka,-,Capped,All Rounder,0.75
+FA6,Ottneil Baartman,South Africa,-,Capped,Bowler,0.75
+FA6,Xavier Bartlett,Australia,-,Capped,Bowler,0.75
+FA6,Dilshan Madushanka,Sri Lanka,MI,Capped,Bowler,0.75
+FA6,Adam Milne,New Zealand,-,Capped,Bowler,2
+FA6,Lungisani Ngidi,South Africa,DC,Capped,Bowler,1
+FA6,William O'Rourke,New Zealand,-,Capped,Bowler,1.5
+FA6,Chetan Sakariya,India,KKR,Capped,Bowler,0.75
+FA6,Sandeep Warrier,India,-,Capped,Bowler,0.75
+UBA6,Musaif Ajaz,India,-,Uncapped,Batter,0.3
+UBA6,Agni Chopra,India,-,Uncapped,Batter,0.3
+UBA6,Abhimanyu Easwaran,India,-,Uncapped,Batter,0.3
+UBA6,Sudip Gharami,India,-,Uncapped,Batter,0.3
+UBA6,Shubham Khajuria,India,-,Uncapped,Batter,0.3
+UBA6,Akhil Rawat,India,-,Uncapped,Batter,0.3
+UBA6,Prateek Yadav,India,-,Uncapped,Batter,0.3
+UAL6,Abdul Bazith,India,-,Uncapped,All Rounder,0.3
+UAL6,K.C Cariappa,India,-,Uncapped,All Rounder,0.3
+UAL6,Yuvraj Chaudhary,India,-,Uncapped,All Rounder,0.3
+UAL6,Aman Khan,India,-,Uncapped,All Rounder,0.3
+UAL6,Sumit Kumar,India,-,Uncapped,All Rounder,0.3
+UAL6,Kamlesh Nagarkoti,India,-,Uncapped,All Rounder,0.3
+UAL6,Hardik Raj,India,-,Uncapped,All Rounder,0.3
+UAL6,Harsh Tyagi,India,-,Uncapped,All Rounder,0.3
+UWK6,M. Ajnas,India,-,Uncapped,Wicketkeeper,0.3
+UWK6,Unmukt Chand,USA,-,Associate,Wicketkeeper,0.3
+UWK6,Tejasvi Dahiya,India,-,Uncapped,Wicketkeeper,0.3
+UWK6,Sumit Ghadigaonkar,India,-,Uncapped,Wicketkeeper,0.3
+UWK6,Baba Indrajith,India,-,Uncapped,Wicketkeeper,0.3
+UWK6,Muhammed Khan,India,-,Uncapped,Wicketkeeper,0.3
+UWK6,Hardik Tamore,India,-,Uncapped,Wicketkeeper,0.3
+UWK6,Bhagmender Lather,India,-,Uncapped,Wicketkeeper,0.3
+UFA6,Baltej Dhanda,India,-,Uncapped,Bowler,0.3
+UFA6,Ali Khan,USA,-,Associate,Bowler,0.3
+UFA6,Ravi Kumar,India,-,Uncapped,Bowler,0.3
+UFA6,Vineet Panwar,India,-,Uncapped,Bowler,0.3
+UFA6,Vidyadhar Patil,India,-,Uncapped,Bowler,0.3
+UFA6,Aradhya Shukla,India,-,Uncapped,Bowler,0.3
+UFA6,Abhinandan Singh,India,-,Uncapped,Bowler,0.3
+AL7,Cooper Connolly,Australia,-,Capped,All Rounder,0.75
+AL7,Dushan Hemantha,Sri Lanka,-,Capped,All Rounder,0.75
+AL7,Jason Holder,West Indies,-,Capped,All Rounder,2
+AL7,Karim Janat,Afghanistan,-,Capped,All Rounder,0.75
+AL7,Jimmy Neesham,New Zealand,-,Capped,All Rounder,1.5
+AL7,Daniel Sams,Australia,-,Capped,All Rounder,1.5
+AL7,William Sutherland,Australia,-,Capped,All Rounder,0.75
+FA7,Taskin Ahmed,Bangladesh,-,Capped,Bowler,1
+FA7,Ben Dwarshuis,Australia,-,Capped,Bowler,0.75
+FA7,Obed McCoy,West Indies,-,Capped,Bowler,1.25
+FA7,Riley Meredith,Australia,-,Capped,Bowler,1.5
+FA7,Lance Morris,Australia,-,Capped,Bowler,1.25
+FA7,Olly Stone,England,-,Capped,Bowler,0.75
+FA7,Daniel Worrall,England,-,Capped,Bowler,1.5
+UBA7,Pyla Avinash,India,-,Uncapped,Batter,0.3
+UBA7,Kiran Chormale,India,-,Uncapped,Batter,0.3
+UBA7,Ashish Dahariya,India,-,Uncapped,Batter,0.3
+UBA7,Tushar Raheja,India,-,Uncapped,Batter,0.3
+UBA7,Sarthak Ranjan,India,-,Uncapped,Batter,0.3
+UBA7,Abhijeet Tomar,India,-,Uncapped,Batter,0.3
+UAL7,Krish Bhagat,India,-,Uncapped,All Rounder,0.3
+UAL7,Sohraab Dhaliwal,India,-,Uncapped,All Rounder,0.3
+UAL7,Harsh Dubey,India,-,Uncapped,All Rounder,0.3
+UAL7,Ramakrishna Ghosh,India,-,Uncapped,All Rounder,0.3
+UAL7,Raj Limbani,India,-,Uncapped,All Rounder,0.3
+UAL7,Ninad Rathva,India,-,Uncapped,All Rounder,0.3
+UAL7,Vivrant Sharma,India,-,Uncapped,All Rounder,0.3
+UAL7,Shiva Singh,India,-,Uncapped,All Rounder,0.3
+UFA7,Sayed Irfan Aftab,India,-,Uncapped,Bowler,0.3
+UFA7,Anirudh Chowdhary,India,-,Uncapped,Bowler,0.3
+UFA7,Anshuman Hooda,India,-,Uncapped,Bowler,0.3
+UFA7,Siddharth Kaul,India,-,Uncapped,Bowler,0.4
+UFA7,Prashant Sai Painkra,India,-,Uncapped,Bowler,0.3
+UFA7,Venkata Satyanarayana Penmetsa,India,-,Uncapped,Bowler,0.3
+UFA7,Yeddala Reddy,India,-,Uncapped,Bowler,0.3
+AL8,Zak Foulkes,New Zealand,-,Capped,All Rounder,0.75
+AL8,Chris Green,Australia,-,Capped,All Rounder,1
+AL8,Shakib Al Hasan,Bangladesh,-,Capped,All Rounder,1
+AL8,Mehidy Hasan Miraz,Bangladesh,-,Capped,All Rounder,1
+AL8,Wiaan Mulder,South Africa,-,Capped,All Rounder,0.75
+AL8,Dwaine Pretorius,South Africa,-,Capped,All Rounder,0.75
+AL8,Dasun Shanaka,Sri Lanka,-,Capped,All Rounder,0.75
+FA8,Shoriful Islam,Bangladesh,-,Capped,Bowler,0.75
+FA8,Blessing Muzarabani,Zimbabwe,-,Capped,Bowler,0.75
+FA8,Matthew Potts,England,-,Capped,Bowler,1.5
+FA8,Tanzim Hasan Sakib,Bangladesh,-,Capped,Bowler,0.75
+FA8,Benjamin Sears,New Zealand,-,Capped,Bowler,1
+FA8,Tim Southee,New Zealand,-,Capped,Bowler,1.5
+FA8,John Turner,England,-,Capped,Bowler,1.5
+UBA8,Joshua Brown,Australia,-,Uncapped,Batter,0.3
+UBA8,Oliver Davies,Australia,-,Uncapped,Batter,0.3
+UBA8,Bevan John Jacobs,New Zealand,-,Uncapped,Batter,0.3
+UBA8,Atharva Kale,India,-,Uncapped,Batter,0.3
+UBA8,Abhishek Nair,India,-,Uncapped,Batter,0.3
+UBA8,Vishwanath Pratap Singh,India,-,Uncapped,Batter,0.3
+UAL8,Nasir Lone,India,-,Uncapped,All Rounder,0.3
+UAL8,Brandon McMullen,Scotland,-,Associate,All Rounder,0.3
+UAL8,S. Midhun,India,-,Uncapped,All Rounder,0.3
+UAL8,Abid Mushtaq,India,-,Uncapped,All Rounder,0.3
+UAL8,Mahesh Pithiya,India,-,Uncapped,All Rounder,0.3
+UAL8,Maramreddy Reddy,India,-,Uncapped,All Rounder,0.3
+UAL8,Atit Sheth,India,-,Uncapped,All Rounder,0.3
+UAL8,Jonty Sidhu,India,-,Uncapped,All Rounder,0.3
+UFA8,Mohit Avasthi,India,-,Uncapped,Bowler,0.3
+UFA8,Faridoon Dawoodzai,Afghanistan,-,Uncapped,Bowler,0.3
+UFA8,Praful Hinge,India,-,Uncapped,Bowler,0.3
+UFA8,Pankaj Jaswal,India,-,Uncapped,Bowler,0.3
+UFA8,Vijay Kumar,India,-,Uncapped,Bowler,0.3
+UFA8,Ashok Sharma,India,-,Uncapped,Bowler,0.3
+UFA8,Mujtaba Yousuf,India,-,Uncapped,Bowler,0.3
+AL9,Ashton Agar,Australia,-,Capped,All Rounder,1.25
+AL9,Roston Chase,West Indies,-,Capped,All Rounder,0.75
+AL9,Junior Dala,South Africa,-,Capped,All Rounder,0.75
+AL9,Mahedi Hasan,Bangladesh,-,Capped,All Rounder,0.75
+AL9,Nangeyalia Kharote,Afghanistan,-,Capped,All Rounder,0.75
+AL9,Dan Lawrence,England,-,Capped,All Rounder,1
+AL9,Nathan Smith,New Zealand,-,Capped,All Rounder,1
+FA9,James Anderson,England,-,Capped,Bowler,1.25
+FA9,Kyle Jamieson,New Zealand,-,Capped,Bowler,1.5
+FA9,Chris Jordan,England,-,Capped,Bowler,2
+FA9,Hasan Mahmud,Bangladesh,-,Capped,Bowler,0.75
+FA9,Tymal Mills,England,-,Capped,Bowler,2
+FA9,David Payne,England,-,Capped,Bowler,1
+FA9,Nahid Rana,Bangladesh,-,Capped,Bowler,0.75
+UBA9,Prayas Ray Barman,India,-,Uncapped,Batter,0.3
+UBA9,Jafar Jamal,India,-,Uncapped,Batter,0.3
+UBA9,Ayaz Khan,India,-,Uncapped,Batter,0.3
+UBA9,Kaushik Maity,India,-,Uncapped,Batter,0.3
+UBA9,Rituraj Sharma,India,-,Uncapped,Batter,0.3
+UBA9,Vaibhav Suryavanshi,India,-,Uncapped,Batter,0.3
+UAL9,Kartik Chadha,India,-,Uncapped,All Rounder,0.3
+UAL9,Writtick Chatterjee,India,-,Uncapped,All Rounder,0.3
+UAL9,Prerit Dutta,India,-,Uncapped,All Rounder,0.3
+UAL9,Rajneesh Gurbani,India,-,Uncapped,All Rounder,0.3
+UAL9,Shubhang Hegde,India,-,Uncapped,All Rounder,0.3
+UAL9,Saransh Jain,India,-,Uncapped,All Rounder,0.3
+UAL9,Ripal Patel,India,-,Uncapped,All Rounder,0.3
+UAL9,Akash Vashisht,India,-,Uncapped,All Rounder,0.3
+UFA9,Anirudh Kanwar,India,-,Uncapped,Bowler,0.3
+UFA9,Shubham Kapse,India,-,Uncapped,Bowler,0.3
+UFA9,Atif Mushtaq,India,-,Uncapped,Bowler,0.3
+UFA9,Dipesh Parwani,India,-,Uncapped,Bowler,0.3
+UFA9,Manish Reddy,India,-,Uncapped,Bowler,0.3
+UFA9,Chetan Sharma,India,-,Uncapped,Bowler,0.3
+UFA9,Avinash Singh,India,-,Uncapped,Bowler,0.3
+AL10,Alick Athanaze,West Indies,-,Capped,All Rounder,0.75
+AL10,Hilton Cartwright,Australia,-,Capped,All Rounder,0.75
+AL10,Dominic Drakes,West Indies,-,Capped,All Rounder,1.25
+FA10,Daryn Dupavillon,South Africa,-,Capped,Bowler,0.75
+AL10,Matthew Forde,West Indies,-,Capped,All Rounder,1.25
+AL10,Patrick Kruger,South Africa,-,Capped,All Rounder,0.75
+FA10,Lahiru Kumara,Sri Lanka,-,Capped,Bowler,0.75
+AL10,Michael Neser,Australia,-,Capped,All Rounder,0.75
+FA10,Richard Ngarava,Zimbabwe,-,Capped,Bowler,0.75
+FA10,Wayne Parnell,South Africa,-,Capped,Bowler,1
+AL10,Keemo Paul,West Indies,-,Capped,All Rounder,1.25
+AL10,Odean Smith,West Indies,-,Capped,All Rounder,0.75
+FA10,Andrew Tye,Australia,-,Capped,Bowler,0.75
+UAL10,Ajay Ahlawat,India,-,Uncapped,All Rounder,0.4
+UAL10,Corbin Bosch,South Africa,-,Uncapped,All Rounder,0.3
+UAL10,Mayank Gusain,India,-,Uncapped,All Rounder,0.3
+UAL10,Mukhtar Hussain,India,-,Uncapped,All Rounder,0.3
+UAL10,Girinath Reddy,India,-,Uncapped,All Rounder,0.3
+UAL10,Jalaj Saxena,India,-,Uncapped,All Rounder,0.4
+UAL10,Yajas Sharma,India,-,Uncapped,All Rounder,0.3
+UAL10,Sanjay Yadav,India,-,Uncapped,All Rounder,0.3
+UFA10,Vishal Godara,India,-,Uncapped,Bowler,0.3
+UFA10,Eshan Malinga,Sri Lanka,-,Uncapped,Bowler,0.3
+UFA10,Samarth Nagraj,India,-,Uncapped,Bowler,0.3
+UFA10,Abhishek Saini,India,-,Uncapped,Bowler,0.3
+UFA10,Dumindu Sewmina,Sri Lanka,-,Uncapped,Bowler,0.3
+UFA10,Pradyuman Kumar Singh,India,-,Uncapped,Bowler,0.3
+UFA10,Vasu Vats,India,-,Uncapped,Bowler,0.3
+UFA10,Saurabh Netravalkar,USA,-,Associate,Bowler,0.3
+UAL11,Umang Kumar,India,-,Uncapped,All Rounder,0.3
+UAL11,Mohamed Ali,India,-,Uncapped,All Rounder,0.3
+UAL11,Atharva Ankolekar,India,-,Uncapped,All Rounder,0.3
+UAL11,Vaisakh Chandran,India,-,Uncapped,All Rounder,0.3
+UAL11,Auqib Dar,India,-,Uncapped,All Rounder,0.3
+UAL11,Rohit Rayudu,India,-,Uncapped,All Rounder,0.3
+UAL11,Uday Saharan,India,-,Uncapped,All Rounder,0.3
+UAL11,Ayush Vartak,India,-,Uncapped,All Rounder,0.3
+UAL12,Baba Aparajith,India,-,Uncapped,All Rounder,0.3
+UAL12,Sumit Kumar Beniwal,India,-,Uncapped,All Rounder,0.3
+UAL12,Nishunk Birla,India,-,Uncapped,All Rounder,0.3
+UAL12,Digvijay Deshmukh,India,-,Uncapped,All Rounder,0.3
+UAL12,Lakshay Jain,India,-,Uncapped,All Rounder,0.3
+UAL12,Duan Jansen,South Africa,-,Uncapped,All Rounder,0.3
+UAL12,Kritagya Singh,India,-,Uncapped,All Rounder,0.3
+UAL12,P. Vignesh,India,-,Uncapped,All Rounder,0.3
+UAL13,Sabhay Chadha,India,-,Uncapped,All Rounder,0.3
+UAL13,Ben Howell,England,-,Uncapped,All Rounder,0.5
+UAL13,Hemanth Kumar,India,-,Uncapped,All Rounder,0.3
+UAL13,Rohan Rana,India,-,Uncapped,All Rounder,0.3
+UAL13,Bharat Sharma,India,-,Uncapped,All Rounder,0.3
+UAL13,Pratham Singh,India,-,Uncapped,All Rounder,0.3
+UAL13,Tripurana Vijay,India,-,Uncapped,All Rounder,0.3
+UAL13,Ravi Yadav,India,-,Uncapped,All Rounder,0.3
+UAL14,Arjun Azad,India,-,Uncapped,All Rounder,0.3
+UAL14,Abhay Choudhary,India,-,Uncapped,All Rounder,0.3
+UAL14,Gaurav Gambhir,India,-,Uncapped,All Rounder,0.3
+UAL14,Shubham Garhwal,India,-,Uncapped,All Rounder,0.3
+UAL14,Tejasvi Jaiswal,India,-,Uncapped,All Rounder,0.3
+UAL14,Sairaj Patil,India,-,Uncapped,All Rounder,0.3
+UAL14,Madhav Tiwari,India,-,Uncapped,All Rounder,0.3
+UAL14,Kamal Tripathi,India,-,Uncapped,All Rounder,0.3
+UAL15,Prashant Chauhan,India,-,Uncapped,All Rounder,0.3
+UAL15,Yash Dabas,India,-,Uncapped,All Rounder,0.3
+UAL15,Dhruv Kaushik,India,-,Uncapped,All Rounder,0.3
+UAL15,Khrievitso Kense,India,-,Uncapped,All Rounder,0.3
+UAL15,Akash Parkar,India,-,Uncapped,All Rounder,0.3
+UAL15,Vignesh Puthur,India,-,Uncapped,All Rounder,0.3
+UAL15,Tripuresh Singh,India,-,Uncapped,All Rounder,0.3
+UAL15,Vijay Yadav,India,-,Uncapped,All Rounder,0.3
