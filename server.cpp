@@ -3,6 +3,8 @@
 #include "crow/middlewares/cors.h"
 #include <crow/app.h>
 #include <crow/common.h>
+#include <crow/http_response.h>
+#include <crow/logging.h>
 #include <jwt-cpp/jwt.h>
 #include <unordered_set>
 
@@ -109,10 +111,10 @@ int main() {
 
   cors.global()
       .origin("http://localhost:5173")
-      .methods("GET"_method, "POST"_method, "PUT"_method, "DELETE"_method)
-      .headers("Content-Type", "Authorization")
       .allow_credentials()
-      .max_age(1728000);
+      .methods("GET"_method, "POST"_method, "PUT"_method, "DELETE"_method,
+               "OPTIONS"_method, "HEAD"_method)
+      .headers("Content-Type", "Authorization", "Accept", "Origin", "Refresh");
 
   CROW_ROUTE(app, "/")([]() { return "Hello world"; });
 
@@ -121,6 +123,7 @@ int main() {
           crow::HTTPMethod::POST)([&app, &wsrooms](const crow::request &req) {
         auto &ctx = app.get_context<crow::CookieParser>(req);
         auto token_cookie = ctx.get_cookie("token");
+        crow::response res;
         if (!token_cookie.empty()) {
           try {
             auto decoded = jwt::decode(token_cookie);
@@ -140,7 +143,6 @@ int main() {
                    {"message", "Currently participating in another auction!"},
                    {"username", usernameClaim.as_string()},
                    {"role", roleClaim.as_string()}});
-              crow::response res;
               res.code = 200;
               res.write(x.dump());
               return res;
@@ -165,7 +167,6 @@ int main() {
                               {"message", "Room created!"},
                               {"username", leaderUsername},
                               {"role", "leader"}});
-        crow::response res;
         Player p;
         p.username = leaderUsername;
         p.role = "leader";
@@ -176,8 +177,9 @@ int main() {
             .same_site(crow::CookieParser::Cookie::SameSitePolicy::Lax)
             //.secure()
             .httponly();
-        Room r;
-        wsrooms[roomId] = r;
+        wsrooms[roomId] = Room{};
+        CROW_LOG_INFO << "Room created: " << roomId;
+        CROW_LOG_INFO << "players.size(): " << wsrooms[roomId].players.size();
         return res;
       });
 
@@ -206,12 +208,6 @@ int main() {
                    {"username", usernameClaim.as_string()},
                    {"role", roleClaim.as_string()}});
               crow::response res;
-              res.add_header("Access-Control-Allow-Origin",
-                             "http://localhost:5173");
-              res.add_header("Access-Control-Allow-Credentials", "true");
-              res.add_header("Access-Control-Allow-Headers", "Content-Type");
-              res.add_header("Access-Control-Allow-Methods",
-                             "GET, POST, OPTIONS");
               res.code = 200;
               res.write(x.dump());
               return res;
@@ -224,11 +220,6 @@ int main() {
           crow::json::wvalue error_response;
           error_response["message"] = "Room does not exist";
           crow::response res;
-          res.add_header("Access-Control-Allow-Origin",
-                         "http://localhost:5173");
-          res.add_header("Access-Control-Allow-Credentials", "true");
-          res.add_header("Access-Control-Allow-Headers", "Content-Type");
-          res.add_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
           res.code = 404;
           res.write(error_response.dump());
           return res;
@@ -252,10 +243,6 @@ int main() {
         p.username = playerName;
         p.role = "player";
         crow::response res;
-        res.add_header("Access-Control-Allow-Origin", "http://localhost:5173");
-        res.add_header("Access-Control-Allow-Credentials", "true");
-        res.add_header("Access-Control-Allow-Headers", "Content-Type");
-        res.add_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
         res.code = 200;
         res.write(x.dump());
         ctx.set_cookie("token", token)
@@ -266,251 +253,188 @@ int main() {
         return res;
       });
 
-  CROW_WEBSOCKET_ROUTE(app, "/wsrooms")
-      .onaccept(
-          [&wsrooms, &app, &rooms_mutex, &connections](const crow::request &req,
-                                                       void **userdata) {
-            auto &ctx = app.get_context<crow::CookieParser>(req);
-            auto token_cookie = ctx.get_cookie("token");
-            if (token_cookie.empty()) {
-              return false;
-            }
-            auto decoded = jwt::decode(token_cookie);
-            auto verifier =
-                jwt::verify()
-                    .allow_algorithm(jwt::algorithm::hs256{jwtSecret})
-                    .with_issuer(domain);
-            verifier.verify(decoded);
-            auto username = decoded.get_payload_claim("username").as_string();
-            auto roomId = decoded.get_payload_claim("room-id").as_string();
-            auto role = decoded.get_payload_claim("role").as_string();
+  CROW_ROUTE(app, "/wsrooms")
+      .websocket(&app)
+      .onaccept([&](const crow::request &req, void **userdata) {
+        auto &ctx = app.get_context<crow::CookieParser>(req);
+        auto token_cookie = ctx.get_cookie("token");
 
-            if (roomId.empty()) {
-              CROW_LOG_WARNING
-                  << "WebSocket connection rejected: No room ID in token";
-              return false;
-            }
+        if (token_cookie.empty()) {
+          CROW_LOG_WARNING << "WebSocket rejected: No token cookie";
+          return false;
+        }
 
-            std::lock_guard<std::mutex> lock(rooms_mutex);
-            if (wsrooms.find(roomId) == wsrooms.end()) {
-              CROW_LOG_WARNING << "WebSocket connection rejected: Room "
-                               << roomId << " doesn't exist";
-              return false;
-            }
+        try {
+          auto decoded = jwt::decode(token_cookie);
+          auto verifier = jwt::verify()
+                              .allow_algorithm(jwt::algorithm::hs256{jwtSecret})
+                              .with_issuer(domain);
+          verifier.verify(decoded);
 
-            Player p;
-            p.role = role;
-            p.username = username;
-            p.team = "Observer";
-            ConnData cd{roomId, p};
-            connections[reinterpret_cast<crow::websocket::connection *>(
-                *userdata)] = cd;
-            return true;
-          })
-      .onopen([&wsrooms, &app, &rooms_mutex,
-               &connections](crow::websocket::connection &conn) {
-        auto details = connections[&conn];
+          std::string username =
+              decoded.get_payload_claim("username").as_string();
+          std::string roomId = decoded.get_payload_claim("room-id").as_string();
+          std::string role = decoded.get_payload_claim("role").as_string();
+
+          if (username.empty() || roomId.empty() || role.empty()) {
+            CROW_LOG_WARNING << "WebSocket rejected: Incomplete token payload";
+            return false;
+          }
+
+          std::lock_guard<std::mutex> lock(rooms_mutex);
+          if (wsrooms.find(roomId) == wsrooms.end()) {
+            CROW_LOG_WARNING << "WebSocket rejected: Room " << roomId
+                             << " not found";
+            return false;
+          }
+
+          Player player{username, "observer", role};
+
+          auto &room = wsrooms[roomId];
+          auto it = std::find_if(room.players.begin(), room.players.end(),
+                                 [&](const auto &entry) {
+                                   return entry.second.username == username;
+                                 });
+
+          if (it != room.players.end()) {
+            player.team = it->second.team;
+            CROW_LOG_INFO << "Returning player " << username << " with team "
+                          << player.team;
+          } else {
+            CROW_LOG_INFO << "New player " << username
+                          << " joining as observer";
+          }
+          ConnData *cd = new ConnData{roomId, player};
+          *userdata = cd;
+          CROW_LOG_INFO << "WebSocket accepted: " << username << " in room "
+                        << roomId;
+          return true;
+
+        } catch (const std::exception &e) {
+          CROW_LOG_WARNING << "WebSocket rejected: JWT error - " << e.what();
+          return false;
+        }
+      })
+      .onopen([&](crow::websocket::connection &conn) {
+        auto *cd = static_cast<ConnData *>(conn.userdata());
+
+        if (!cd) {
+          CROW_LOG_ERROR << "WebSocket open called with null userdata";
+          conn.close("Invalid connection");
+          return;
+        }
+
+        const std::string roomId = cd->roomId;
+        const Player player = cd->player;
+
+        CROW_LOG_INFO << "Assigned player successfully";
         std::lock_guard<std::mutex> lock(rooms_mutex);
 
-        for (auto it = wsrooms[details.roomId].players.begin();
-             it != wsrooms[details.roomId].players.end(); ++it) {
-          if (it->second.username == details.player.username) {
-            it->first->close(
-                crow::json::wvalue({{"type", "error"},
-                                    {"message", "You were disconnected because "
-                                                "you logged in elsewhere."}})
-                    .dump());
-            wsrooms[details.roomId].connections.erase(it->first);
-            wsrooms[details.roomId].players.erase(it);
-            connections.erase(it->first);
-            break;
+        auto roomIt = wsrooms.find(roomId);
+        if (roomIt == wsrooms.end()) {
+          CROW_LOG_ERROR << "WebSocket open: Room " << roomId << " not found";
+          conn.close("Room not found");
+          delete cd;
+          return;
+        }
+
+        Room &room = roomIt->second;
+        room.players[&conn] = player;
+        room.connections.insert(&conn);
+        connections[&conn] = ConnData{roomId, player};
+
+        delete cd;
+
+        conn.send_text(crow::json::wvalue{
+            {"type", "Your Team"},
+            {"team",
+             player.team}}.dump());
+        crow::json::wvalue::list playerList;
+        CROW_LOG_INFO << "Collecting Player List";
+        for (const auto &[_, p] : room.players) {
+          if (p.username != player.username) {
+            playerList.push_back(crow::json::wvalue{
+                {"username", p.username}, {"team", p.team}, {"role", p.role}});
           }
         }
 
-        wsrooms[details.roomId].players[&conn] = details.player;
-        wsrooms[details.roomId].connections.insert(&conn);
-
-        crow::json::wvalue::list playerList;
-        for (auto &playerEntry : wsrooms[details.roomId].players) {
-          Player &player = playerEntry.second;
-          crow::json::wvalue playerJson({{"username", player.username},
-                                         {"team", player.team},
-                                         {"role", player.role}});
-          playerList.push_back(playerJson);
+        try {
+          conn.send_text(crow::json::wvalue{
+              {"type", "Player List"},
+              {"list",
+               playerList}}.dump());
+          CROW_LOG_DEBUG << "Sent player list to " << player.username;
+        } catch (const std::exception &e) {
+          CROW_LOG_ERROR << "send_text failed: " << e.what();
         }
 
-        conn.send_text(
-            crow::json::wvalue({{"type", "Player List"}, {"list", playerList}})
-                .dump());
+        for (auto *other : wsrooms[roomId].connections) {
+          if (other != &conn) {
+            other->send_text(crow::json::wvalue{
+                {"type", "New Player"},
+                {"username", player.username},
+                {"team", player.team},
+                {"role",
+                 player.role}}.dump());
+          }
+        }
+      })
+      .onmessage([&](crow::websocket::connection &conn,
+                     const std::string &message, bool is_binary) {
+        auto json = crow::json::load(message);
+        if (!json)
+          return;
 
-        for (auto &existingConn : wsrooms[details.roomId].connections) {
-          existingConn->send_text(
-              crow::json::wvalue({{"type", "New Player"},
-                                  {"username", details.player.username},
-                                  {"role", details.player.role},
-                                  {"team", "Observer"}})
-                  .dump());
+        std::string type = json["type"].s();
+        if (type == "Change Username") {
+          std::string newUsername = json["newUsername"].s();
+          std::lock_guard<std::mutex> lock(rooms_mutex);
+          auto it = connections.find(&conn);
+          if (it != connections.end()) {
+            ConnData &connData = it->second;
+            auto oldUsername = connData.player.username;
+            connData.player.username = newUsername;
+            wsrooms[connData.roomId].players[&conn].username = newUsername;
+            conn.send_text(crow::json::wvalue{
+                {"type", "Your Username"},
+                {"username",
+                 newUsername}}.dump());
+            for (auto *other : wsrooms[connData.roomId].connections) {
+              if (other != &conn) {
+                other->send_text(crow::json::wvalue{
+                    {"type", "Username Change"},
+                    {"oldUsername", oldUsername},
+                    {"newUsername",
+                     newUsername}}.dump());
+              }
+            }
+          }
+        }
+        if (type == "Change Team") {
+          std::string newTeam = json["newTeam"].s();
+          std::lock_guard<std::mutex> lock(rooms_mutex);
+          auto it = connections.find(&conn);
+          if (it != connections.end()) {
+            ConnData &connData = it->second;
+            auto username = connData.player.username;
+            connData.player.team = newTeam;
+            wsrooms[connData.roomId].players[&conn].team = newTeam;
+            conn.send_text(crow::json::wvalue{
+                {"type", "Your Team"},
+                {"team",
+                 newTeam}}.dump());
+            for (auto *other : wsrooms[connData.roomId].connections) {
+              if (other != &conn) {
+                other->send_text(crow::json::wvalue{
+                    {"type", "Team Change"},
+                    {"username", username},
+                    {"team",
+                     newTeam}}.dump());
+              }
+            }
+          }
         }
       });
-  /*.onopen([&wsrooms, &app,
-           &rooms_mutex](crow::websocket::connection &conn) {
-    auto &ctx = app.get_context<crow::CookieParser>(req);
-    auto token_cookie = ctx.get_cookie("token");
-    if (wsrooms.find(roomId) == wsrooms.end()) {
-      conn.close(crow::json::wvalue(
-                     {{"type", "error"}, {"message", "Invalid Room"}})
-                     .dump());
-      return;
-    }
-    if (token_cookie.empty()) {
-      conn.close(
-          crow::json::wvalue({{"type", "error"}, {"message", "No Token"}})
-              .dump());
-      return;
-    }
-    try {
-      auto decoded = jwt::decode(token_cookie);
-      auto verifier = jwt::verify()
-                          .allow_algorithm(jwt::algorithm::hs256{jwtSecret})
-                          .with_issuer(domain);
-      verifier.verify(decoded);
-      auto usernameClaim = decoded.get_payload_claim("username");
-      auto roomIdClaim = decoded.get_payload_claim("room-id");
-      auto roleClaim = decoded.get_payload_claim("role");
-
-      if (roomIdClaim.as_string() != roomId) {
-        conn.close(crow::json::wvalue(
-                       {{"type", "error"}, {"message", "Room Mismatch"}})
-                       .dump());
-        return;
-      }
-      std::lock_guard<std::mutex> lock(rooms_mutex);
-
-      for (auto it = wsrooms[roomId].players.begin();
-           it != wsrooms[roomId].players.end(); ++it) {
-        if (it->second.username == usernameClaim.as_string()) {
-          it->first->close(crow::json::wvalue(
-                               {{"type", "error"},
-                                {"message", "You were disconnected because "
-                                            "you logged in elsewhere."}})
-                               .dump());
-          wsrooms[roomId].connections.erase(it->first);
-          wsrooms[roomId].players.erase(it);
-          break;
-        }
-      }
-
-      Player p{usernameClaim.as_string(), roleClaim.as_string()};
-
-      wsrooms[roomId].players[&conn] = p;
-      wsrooms[roomId].connections.insert(&conn);
-
-      crow::json::wvalue::list playerList;
-      for (auto &playerEntry : wsrooms[roomId].players) {
-        Player &player = playerEntry.second;
-        crow::json::wvalue playerJson({{"username", player.username},
-                                       {"team", player.team},
-                                       {"role", player.role}});
-        playerList.push_back(playerJson);
-      }
-
-      conn.send_text(crow::json::wvalue(
-                         {{"type", "Player List"}, {"list", playerList}})
-                         .dump());
-
-      for (auto &existingConn : wsrooms[roomId].connections) {
-        existingConn->send_text(
-            crow::json::wvalue({{"type", "New Player"},
-                                {"username", usernameClaim.as_string()},
-                                {"role", roleClaim.as_string()},
-                                {"team", "Observer"}})
-                .dump());
-      }
-
-    } catch (const std::exception &e) {
-      CROW_LOG_WARNING << "JWT error: " << e.what();
-      conn.close(crow::json::wvalue(
-                     {{"type", "error"}, {"message", "Token Error"}})
-                     .dump());
-      return;
-    }
-  })
-  .onclose([&wsrooms, &rooms_mutex](crow::websocket::connection &conn,
-                                    const std::string &reason, uint16_t) {
-    std::lock_guard<std::mutex> lock(rooms_mutex);
-    auto roomIt = wsrooms.find(roomId);
-    if (roomIt == wsrooms.end())
-      return;
-
-    Room &room = roomIt->second;
-    Player &p = room.players[&conn];
-    room.connections.erase(&conn);
-    room.players.erase(&conn);
-    for (auto &existingConn : wsrooms[roomId].connections) {
-      existingConn->send_text(crow::json::wvalue({{"type", "Player Left"},
-                                                  {"username", p.username},
-                                                  {"role", p.role},
-                                                  {"team", p.team}})
-                                  .dump());
-    }
-  })
-  .onmessage([&wsrooms, &rooms_mutex](crow::websocket::connection &conn,
-                                      const std::string &data,
-                                      bool is_binary) {
-    crow::json::rvalue message = crow::json::load(data);
-    if (!message || !message.has("type"))
-      return;
-
-    std::string type = message["type"].s();
-
-    if (type == "Username Change" && message.has("newUsername")) {
-      std::string newUsername = message["newUsername"].s();
-
-      std::lock_guard<std::mutex> lock(rooms_mutex);
-      auto &room = wsrooms[roomId];
-      std::string oldUsername;
-
-      for (auto &[c, player] : room.players) {
-        if (c == &conn) {
-          oldUsername = player.username;
-          player.username = newUsername;
-          break;
-        }
-      }
-      crow::json::wvalue updateMsg;
-      updateMsg["type"] = "Username Change";
-      updateMsg["newUsername"] = newUsername;
-      updateMsg["oldUsername"] = oldUsername;
-
-      for (auto *c : room.connections) {
-        c->send_text(updateMsg.dump());
-      }
-    }
-
-    if (type == "Team Change" && message.has("newTeam")) {
-
-      std::string newTeam = message["newTeam"].s();
-
-      std::lock_guard<std::mutex> lock(rooms_mutex);
-      auto &room = wsrooms[roomId];
-      std::string username;
-      for (auto &[c, player] : room.players) {
-        if (c == &conn) {
-          username = player.username;
-          player.team = newTeam;
-          break;
-        }
-      }
-      crow::json::wvalue updateMsg;
-      updateMsg["type"] = "Team Change";
-      updateMsg["username"] = username;
-      updateMsg["newTeam"] = newTeam;
-
-      for (auto *c : room.connections) {
-        c->send_text(updateMsg.dump());
-      }
-    }
-  }); */
 
   app.loglevel(crow::LogLevel::Debug);
   app.port(18080).multithreaded().run();
